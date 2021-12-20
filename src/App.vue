@@ -15,6 +15,7 @@ const logger = new Logger({
 })
 
 const log = () => {
+  console.log(input.value)
   logger.send(input.value)
 }
 
