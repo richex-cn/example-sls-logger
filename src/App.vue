@@ -11,12 +11,13 @@ const logger = new Logger({
   logstore: 'web',
   time: 1,
   count: 10,
-  compress: true
+  // compress: true
 })
 
 const log = () => {
-  console.log(input.value)
-  logger.send(input.value)
+  const data = JSON.parse(input.value)
+  console.log('[ data ]', data)
+  logger.send(data)
 }
 
 const bigData = () => {
